@@ -1,0 +1,228 @@
+/* Estilos para o menu de navegação horizontal */
+nav {
+    background-color: #004908;
+    overflow: hidden;
+}
+.navbar {
+    background-color: #243901; /* Verde musgo */
+    box-shadow: 0 4px 2px -2px rgb(22, 73, 4);
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #dddddd00;
+    color: black;
+}
+
+/* Estilos para o banner com vídeo */
+.banner {
+    position: relative;
+    height: 100vh; /* Ocupa toda a altura da viewport */
+    overflow: hidden;
+    background-color: black; /* Fallback para navegadores que não suportam vídeo */
+}
+
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.banner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para garantir a legibilidade do texto */
+}
+
+.banner-content h1 {
+    font-size: 4rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.banner-content a {
+    color: #003f0f;
+    text-decoration: none;
+}
+
+.banner-content a:hover {
+    color: #000;
+}
+
+/* Estilos para o conteúdo principal */
+.content {
+    padding: 20px;
+    background-color: #001a08;
+}
+
+/* Estilos para a seção Sobre Nós */
+#sobre {
+    padding: 60px 0;
+}
+
+#sobre img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#sobre h2 {
+    margin-bottom: 20px;
+}
+
+#sobre p {
+    margin-bottom: 20px;
+    font-style: italic;
+    font-family:Georgia
+}
+
+/* Estilos para a seção Serviços */
+#servicos {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+#servicos h2 {
+    margin-bottom: 40px;
+}
+
+#servicos .col-md-4 {
+    margin-bottom: 30px;
+    font-family: Georgia;
+}
+
+#servicos img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#testemunhos h2 {
+    margin-bottom: 40px;
+}
+
+blockquote {
+    background-color: #ffffff; /* Fundo branco para o texto */
+    color: #000000; /* Texto preto */
+    padding: 20px;
+    border-left: 6px solid #001a08; /* Verde musgo */
+    border-right: 6px solid #001a08; /* Verde musgo */
+    margin-bottom: 20px;
+}
+blockquote footer {
+    color: #ffffff; /* Verde musgo para o rodapé do bloco */
+}
+/* Estilos para a seção Contato */
+#contato {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+#contato h2 {
+    margin-bottom: 40px;
+}
+
+#contato .form-control {
+    margin-bottom: 20px;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #002e0e;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+/* Estilos para o botão Voltar ao Topo */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #001a08;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#backToTop:hover {
+    background-color: #f7f5f576;
+}
+
+/* Ajustes de layout e responsividade */
+.service-card, .testimonial-card {
+    transition: transform 0.3s;
+    font-family: Georgia;
+}
+
+.service-card:hover, .testimonial-card:hover {
+    transform: translateY(-10px);
+    font-family: Georgia;
+}
+
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 2.5rem;
+    }
+}
+.custom-navbar {
+    background-color: #001a08 !important; /* Altere para a cor que quiser */
+    border-bottom: 2px solid #FFD700; /* Linha dourada na parte inferior */
+}
+
+.custom-navbar .navbar-brand {
+    color: #ffffff !important; /* Cor do nome da marca */
+    font-weight: bold;
+}
+
+.custom-navbar .nav-link {
+    color: #b5b5b5 !important; /* Cor dos links */
+}
+
+.custom-navbar .nav-link:hover {
+    color: #ffffff !important; /* Cor dos links ao passar o mouse */
+}
+
+#testemunhos {
+    background-color: #001a08 !important; /* Nova cor de fundo */
+    color: #FFD700 !important; /* Nova cor do texto */
+}
+.img-grande {
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-pequena {
+    height: calc(50% - 10px); /* Ajuste a altura conforme necessário */
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 40px; /* Espaçamento entre as imagens pequenas */
+}

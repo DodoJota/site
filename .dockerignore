@@ -1,0 +1,26 @@
+# Ignorar ambientes virtuais
+venv/
+env/
+
+# Ignorar arquivos de configuração de IDE
+.vscode/
+.idea/
+
+# Ignorar arquivos temporários
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar arquivos de sistema operacional
+.DS_Store
+
+# Ignorar diretórios de dependências locais
+node_modules/
+
+# Ignorar arquivos de compilação
+*.bak
+*.tmp

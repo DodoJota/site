@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nome do Negócio - Especialistas em serviços premium de alojamento e experiências enológicas">
+    <title>Quinta dos Gatos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+        <a class="navbar-brand" href="{{ url_for('home') }}">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" width="70" height="30" class="d-inline-block align-top" alt="Logo Nome do Negócio" loading="lazy">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicos">Provas de Vinho</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#alojamento">Alojamentos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">A Quinta</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testemunhos">Testemunhos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contatos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner com Vídeo -->
+    <div class="banner">
+        <video autoplay muted loop id="video-background" class="video-background">
+            <source src="{{ url_for('static', filename='video/uvaverde.mp4') }}" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+        </video>
+        <div class="banner-content animate__animated animate__fadeInUp">
+            <h2 class="display-4 text-white">Descubra a magia do Enoturismo</h2>
+            <h1 class="display-4 text-white">Uma experiência inesquecível!</h1>
+            <a href="https://www.booking.com/hotel/pt/quinta-picouto-de-cima.html" class="btn btn-light mt-3" target="_blank" rel="noopener noreferrer">
+                Reservar
+            </a>
+        </div>
+    </div>
+    <section id="servicos" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Degustação de Vinhos Exclusivos</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4 service-card">
+                    <img src="{{ url_for('static', filename='images/mestre_barrica.jpg') }}" class="img-fluid rounded" alt="Jantar Temático">
+                    <h2 class="mt-3">Provas de vinhos</h2>
+                    <p>Os hóspedes terão a oportunidade de desfrutar de provas de vinhos exclusivas, mergulhando nos sabores e aromas únicos da região. Em um ambiente acolhedor e sofisticado, poderão degustar rótulos selecionados diretamente dos produtores locais. Cada taça revela a tradição e a paixão por trás de cada safra, proporcionando uma experiência sensorial inesquecível.<br>
+                        Além da degustação, os visitantes poderão aprender mais sobre o processo de produção, desde a colheita das uvas até o envelhecimento em barris. A experiência acontece em meio a paisagens deslumbrantes, com vistas panorâmicas das vinhas e das colinas ao redor. Perfeito para quem busca momentos de tranquilidade, conexão com a natureza e o prazer de apreciar vinhos de excelência. Uma oportunidade única para relaxar, brindar e criar memórias inesquecíveis.</p>
+                    <a href="{{ url_for('servicos') }}" class="btn btn-secondary mt-3">Ver mais</a>
+                </div>
+                <div class="col-md-6 mb-4 service-card">
+                    <img src="{{ url_for('static', filename='images/grande_casalbarrica.jpg') }}" class="img-fluid rounded" alt="Avaliação de Adega">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="alojamento" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Experiência de Alojamento Premium</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4 service-card">
+                    <img src="{{ url_for('static', filename='images/grande_vinha2.jpg') }}" class="img-fluid rounded" alt="Eventos Personalizados">
+                </div>
+                <div class="col-md-6 mb-4 service-card">
+                    <img src="{{ url_for('static', filename='images/comida_vinho.jpg') }}" class="img-fluid rounded" alt="Avaliação de Adega">
+                    <h2 class="mt-3">Alojamento Premium</h2>
+                    <p>Desfrute de uma experiência única em uma hospedagem premium, no coração de uma quinta cercada por vinhas a perder de vista. Aqui, o luxo se une à natureza, proporcionando momentos de paz e tranquilidade em um cenário deslumbrante. Os amplos quartos oferecem conforto absoluto, com janelas que se abrem para colinas cobertas de vinhedos.<br>
+                        A cada amanhecer, o canto dos pássaros e o ar puro do campo convidam a um despertar revigorante. Durante o dia, explore a beleza da propriedade, caminhe entre as vinhas e desfrute de vistas panorâmicas inesquecíveis. No final da tarde, relaxe com uma taça de vinho enquanto o pôr do sol pinta o céu em tons dourados. Um refúgio perfeito para quem busca exclusividade, contato com a natureza e momentos memoráveis.</p>
+                    <a href="{{ url_for('alojamento') }}" class="btn btn-secondary mt-3">Ver mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sobre Nós -->
+    <section id="sobre" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='images/picfam.jpg') }}" class="img-fluid rounded shadow" alt="Nossa Equipe">
+                </div>
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                    <h2 class="mb-4">Nossa História</h2>
+                    <p class="lead">A Quinta Picouto de Cima foi adquirida em 1997 por Albertino Rodrigues Ferreira, localiza-se na freguesia de Gominhães em Guimarães, Portugal. Esta região é conhecida por produzir os vinhos verdes, únicos no mundo.</p>
+                    <a href="#contato" class="btn btn-secondary mt-3 align-self-start">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testemunhos -->
+    <section id="testemunhos" class="py-5 bg-success text-white">
+        <div class="container">
+            <h2 class="text-center mb-5">Depoimentos</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <blockquote class="blockquote testimonial-card">
+                        <p class="mb-0">"Nada como caminhar entre vinhas douradas pelo sol, sentindo a brisa leve e o aroma das 
+                            uvas maduras. A cada taça, uma sensação de calma e conexão com a natureza. Uma experiência que renova 
+                            a alma!"</p>
+                        <footer class="blockquote-footer text-white mt-3">Maria Silva, CEO</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <blockquote class="blockquote testimonial-card">
+                        <p class="mb-0">"A casa era simplesmente encantadora! Espaçosa, aconchegante e com uma vista incrível 
+                            para os vinhedos. Acordar e tomar um café na varanda, cercado por essa paisagem, foi uma experiência 
+                            única. Tudo perfeito, do quarto elegante ao vinho maravilhoso que nos esperava."</p>
+                        <footer class="blockquote-footer text-white mt-3">João Santos, Colecionador</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <blockquote class="blockquote testimonial-card">
+                        <p class="mb-0">"Ficamos sozinhos em uma casa lindíssima, totalmente equipada e com uma decoração 
+                            impecável. As janelas se abriam para um mar de vinhas, e cada pôr do sol era um espetáculo à parte.
+                            Entre a paz do lugar e os vinhos incríveis, foi uma experiência dos sonhos!"</p>
+                        <footer class="blockquote-footer text-white mt-3">Ana Costa, Cliente VIP</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Entre em Contato</h2>
+            <form id="contactForm" method="POST" action="/enviar">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="nome" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea class="form-control" id="mensagem" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-secondary">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="backToTop" class="btn btn-primary" title="Voltar ao topo">↑</button>
+
+    <!-- Rodapé -->
+    <footer class="text-white text-center py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Contatos</h5>
+                    <p>Email: contato@exemplo.com</p>
+                    <p>Telefone: 213456789</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Morada</h5>
+                    <p>Rua Exemplo, 123</p>
+                    <p>Localidade, Cidade, Distrito</p>
+                    <p>CP: 2222-111</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Redes Sociais</h5>
+                    <p><a href="#" class="text-white">Facebook</a></p>
+                    <p><a href="#" class="text-white">Instagram</a></p>
+                </div>
+            </div>
+            <div class="mt-3">
+                <p>&copy; 2025 Empresa. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
